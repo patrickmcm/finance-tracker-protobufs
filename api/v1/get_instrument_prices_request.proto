@@ -1,0 +1,12 @@
+syntax = "proto3";
+package v1;
+
+option go_package = "github.com/patrickmcm/finance-tracker-backend/api/v1";
+
+import "google/protobuf/timestamp.proto";
+
+message GetInstrumentPricesRequest {
+  string ticker = 1;
+  google.protobuf.Timestamp dateFrom = 2;
+  google.protobuf.Timestamp dateTo = 3;
+}

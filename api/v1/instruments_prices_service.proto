@@ -1,0 +1,11 @@
+syntax = "proto3";
+package v1;
+
+option go_package = "github.com/patrickmcm/finance-tracker-backend/api/v1";
+
+import "v1/get_instrument_prices_request.proto";
+import "v1/instrument_prices_collection.proto";
+
+service InstrumentsPricesService {
+  rpc Get(GetInstrumentPricesRequest) returns (InstrumentPricesCollection);
+}

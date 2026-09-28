@@ -1,0 +1,9 @@
+syntax = "proto3";
+package v1;
+
+option go_package = "github.com/patrickmcm/finance-tracker-backend/api/v1";
+
+message Numeric {
+  int64 unscaled = 1;
+  int32 exp = 2;
+}
