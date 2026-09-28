@@ -1,0 +1,10 @@
+syntax = "proto3";
+package v1;
+
+option go_package = "github.com/patrickmcm/finance-tracker-backend/api/v1";
+
+import "v1/instrument.proto";
+
+message InstrumentCollection {
+  repeated Instrument instruments = 1;
+}
